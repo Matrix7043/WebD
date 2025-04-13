@@ -25,5 +25,11 @@
     "eslint-plugin-react-refresh": "^0.4.19",
     "globals": "^15.15.0",
     "vite": "^6.2.0"
+  },
+  "homepage": "https://Matrix7043.github.io/WebD",
+  "scripts": {
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d build"
   }
+
 }
