@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>23BCE1351</title>
+    <script>
+        // Function to update time
+        function updateTime() {
+            const now = new Date();
+            document.getElementById("time").innerText = now.toLocaleTimeString();
+        }
+        setInterval(updateTime, 1000); // Update every second
+
+        function validateForm() {
+            let name = document.getElementById("name").value;
+            let address = document.getElementById("address").value;
+            let zip = document.getElementById("zip").value;
+            let phone = document.getElementById("phone").value;
+            let email = document.getElementById("email").value;
+            let password = document.getElementById("password").value;
+            let confirmPassword = document.getElementById("confirmPassword").value;
+            let pan = document.getElementById("pan").value;
+            let country = document.getElementById("country").value;
+            let gender = document.getElementsByName("gender");
+            let preferences = document.getElementsByName("preferences");
+
+            // Validate Name
+            if (name.trim() === "" || name.length > 15) {
+                alert("Name is required and should not exceed 15 characters.");
+                document.getElementById("name").focus();
+                return false;
+            }
+
+            // Validate Address
+            if (address.trim() === "") {
+                alert("Address is required.");
+                document.getElementById("address").focus();
+                return false;
+            }
+
+            // Validate Zip Code (numeric, max 6 digits)
+            if (!/^\d{1,6}$/.test(zip)) {
+                alert("Zip Code should be numeric and up to 6 digits.");
+                document.getElementById("zip").focus();
+                return false;
+            }
+
+            // Validate Phone (numeric, exactly 10 digits)
+            if (!/^\d{10}$/.test(phone)) {
+                alert("Phone number should be exactly 10 numeric digits.");
+                document.getElementById("phone").focus();
+                return false;
+            }
+
+            // Validate Email
+            let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            if (!emailPattern.test(email)) {
+                alert("Invalid email format.");
+                document.getElementById("email").focus();
+                return false;
+            }
+
+            // Validate Password
+            let passwordPattern = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,15}$/;
+            if (!passwordPattern.test(password)) {
+                alert("Password must be 8-15 characters long and include at least one letter, one number, and one special character.");
+                document.getElementById("password").focus();
+                return false;
+            }
+
+            // Confirm Password
+            if (password !== confirmPassword) {
+                alert("Passwords do not match.");
+                document.getElementById("confirmPassword").focus();
+                return false;
+            }
+
+            // Validate PAN (10-character alphanumeric, pattern)
+            let panPattern = /^[A-Z]{5}[0-9]{4}[A-Z]{1}$/;
+            if (!panPattern.test(pan)) {
+                alert("PAN must be 10 characters: 5 uppercase letters, 4 digits, 1 uppercase letter.");
+                document.getElementById("pan").focus();
+                return false;
+            }
+
+            // Validate Gender
+            let genderSelected = false;
+            for (let i = 0; i < gender.length; i++) {
+                if (gender[i].checked) {
+                    genderSelected = true;
+                    break;
+                }
+            }
+            if (!genderSelected) {
+                alert("Please select a gender.");
+                return false;
+            }
+
+            // Validate Preferences
+            let prefSelected = false;
+            for (let i = 0; i < preferences.length; i++) {
+                if (preferences[i].checked) {
+                    prefSelected = true;
+                    break;
+                }
+            }
+            if (!prefSelected) {
+                alert("Please select at least one preference.");
+                return false;
+            }
+
+            // Validate Country Selection
+            if (country === "Select") {
+                alert("Please select a country.");
+                return false;
+            }
+
+            alert("Form submitted successfully!");
+            return true;
+        }
+
+        function printFormData() {
+            let gender = document.getElementsByName("gender");
+            let preferences = document.getElementsByName("preferences");
+            let country = document.getElementById("country").value;
+
+            let genderValue = "";
+            for (let i = 0; i < gender.length; i++) {
+                if (gender[i].checked) {
+                    genderValue = gender[i].value;
+                }
+            }
+
+            let preferencesValues = [];
+            for (let i = 0; i < preferences.length; i++) {
+                if (preferences[i].checked) {
+                    preferencesValues.push(preferences[i].value);
+                }
+            }
+
+            console.log("Gender: " + genderValue);
+            console.log("Country: " + country);
+            console.log("Preferences: " + preferencesValues.join(", "));
+        }
+    </script>
+</head>
+<body>
+<h2>Test JavaScript Form Validation</h2>
+<p>Time: <span id="time"></span></p>
+
+<form onsubmit="return validateForm()">
+    Name*: <input type="text" id="name"><br><br>
+    Address*: <textarea id="address"></textarea><br><br>
+    Zip Code*: <input type="text" id="zip"><br><br>
+    Country*:
+    <select id="country">
+        <option value="Select">Please select...</option>
+        <option value="India">India</option>
+        <option value="USA">USA</option>
+        <option value="UK">UK</option>
+    </select><br><br>
+
+    Gender*:
+    <input type="radio" name="gender" value="Male"> Male
+    <input type="radio" name="gender" value="Female"> Female <br><br>
+
+    Preferences*:
+    <input type="checkbox" name="preferences" value="Red"> Red
+    <input type="checkbox" name="preferences" value="Green"> Green
+    <input type="checkbox" name="preferences" value="Blue"> Blue <br><br>
+
+    Phone*: <input type="text" id="phone"><br><br>
+    Email*: <input type="text" id="email"><br><br>
+    Password (8-15 chars)*: <input type="password" id="password"><br><br>
+    Verify Password*: <input type="password" id="confirmPassword"><br><br>
+    PAN No: <input type="text" id="pan"><br><br>
+
+    <input type="submit" value="SEND">
+    <input type="button" value="CANCEL">
+</form>
+</body>
+</html>

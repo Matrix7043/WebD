@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>23BCE1351</title>
+    <script src="Q3.js"></script>
+</head>
+<body>
+
+<table border="1">
+  <tr>
+    <th colspan="2" align="middle">
+      <label for="BMI">BMI Calculator</label>
+      <select id="BMI" name="BMI">
+        <option value="0">Male</option>
+        <option value="1">Female</option>
+      </select>
+    </th>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <label for="weight"><b>Enter your Weight:</b></label><br>
+      <label for="weight">(in pounds)</label>
+      <input type="text" id="weight" name="weight">
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <label style><b>Enter your Height:</b></label><br>
+      <label for="height_f">(in feet)</label>
+      <input type="text" id="height_f" name="height_f"><br><br>
+      <label for="height_i">(in inches)</label>
+      <input type="text" id="height_i" name="height_i">
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" align="middle"><input type="button" value="Calculate" onclick="Calculate()"></td>
+  </tr>
+  <tr>
+    <th><label for="output">YOUR<br>BMI</label></th>
+    <td align="middle"><input type="text" id="output" ></td>
+  </tr>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+html{
+    background-image: url("backr.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+svg{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    right: 50%;
+    bottom: 50%;
+}
+
+.content {
+    column-count: 3; 
+    column-gap: 50px; 
+    column-rule-style:dotted; 
+    column-rule-width: 2px; 
+    text-align: justify;
+    line-height: 30pt;
+}
+
+.main{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode';
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
+.sub{
+    font-family:Verdana, Tahoma, sans-serif;
+    font-size: medium;
+    font-weight: bold;
+    color: olive;
+    display: block;
+}
+.sub::before{
+    content: "";
+    display: block;
+    height: 5px;
+}
+
+.rainbow-text { background: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+                color: transparent;
+                background-clip: text;
+                width:200px}
+
+svg{
+    animation: Ball 5s linear 0s infinite alternate-reverse;
+}
+
+@keyframes Ball {
+    10%{position: relative; left: 1px; transform: translateY(-10px) skewY(-1px);}
+    20%{position: relative; left: 35px; transform: translateY(-20px) skewY(-2px);}
+    30%{position: relative; left: 40px; transform: translateY(-30px) skewY(-3px);}
+    40%{position: relative; left: 45px; transform: translateY(-40px) skewY(-4px);}
+    50%{position: relative; left: 50px; transform: translateY(-50px) skewY(-5px);}
+    60%{position: relative; left: 55px; transform: translateY(-60px) skewY(-6px);}
+    70%{position: relative; left: 60px; transform: translateY(-70px) skewY(-7px);}
+    80%{position: relative; left: 65px; transform: translateY(-80px) skewY(-8px);}
+    90%{position: relative; left: 70px; transform: translateY(-90px) skewY(-9px);}
+    100%{position: relative; left: 75px; transform: translateY(-100px)}
+}

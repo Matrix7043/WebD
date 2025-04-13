@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>23BCE1351</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .container {
+            position: relative;
+            width: 400px;
+            height: 300px;
+            margin: 20px auto;
+        }
+        .box {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            color: white;
+            font-size: 20px;
+            text-align: center;
+            line-height: 150px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        #box1 {
+            background-color: red;
+            top: 50px;
+            left: 50px;
+            z-index: 1;
+        }
+        #box2 {
+            background-color: blue;
+            top: 80px;
+            left: 100px;
+            z-index: 2;
+        }
+        #box3 {
+            background-color: green;
+            top: 110px;
+            left: 150px;
+            z-index: 3;
+        }
+        .controls {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div id="box1" class="box">Box 1</div>
+    <div id="box2" class="box">Box 2</div>
+    <div id="box3" class="box">Box 3</div>
+</div>
+
+<div class="controls">
+    <label>Box:</label>
+    <select id="boxSelect">
+        <option value="box1">Box 1</option>
+        <option value="box2">Box 2</option>
+        <option value="box3">Box 3</option>
+    </select>
+    <button onclick="increaseZIndex()">Increase</button>
+    <button onclick="decreaseZIndex()">Decrease</button>
+    <h3>Z-Index</h3>
+    <p id="zValues"></p>
+</div>
+
+<script>
+    // Function to update Z-Index values display
+    function updateZValues() {
+        const box1 = window.getComputedStyle(document.getElementById("box1")).zIndex;
+        const box2 = window.getComputedStyle(document.getElementById("box2")).zIndex;
+        const box3 = window.getComputedStyle(document.getElementById("box3")).zIndex;
+        document.getElementById("zValues").innerHTML =
+            `Box 1: ${box1}, Box 2: ${box2}, Box 3: ${box3}`;
+    }
+
+    // Increase Z-Index
+    function increaseZIndex() {
+        const selectedBox = document.getElementById(document.getElementById("boxSelect").value);
+        let currentZ = parseInt(window.getComputedStyle(selectedBox).zIndex);
+        selectedBox.style.zIndex = currentZ + 1;
+        updateZValues();
+    }
+
+    // Decrease Z-Index
+    function decreaseZIndex() {
+        const selectedBox = document.getElementById(document.getElementById("boxSelect").value);
+        let currentZ = parseInt(window.getComputedStyle(selectedBox).zIndex);
+        selectedBox.style.zIndex = Math.max(1, currentZ - 1);
+        updateZValues();
+    }
+
+    // Initialize the Z-Index display
+    updateZValues();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+.javascript-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: 20px auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.javascript-container h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.exercise-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.exercise-list li {
+  margin: 10px 0;
+}
+
+.exercise-list a {
+  text-decoration: none;
+  color: #007BFF;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.exercise-list a:hover {
+  text-decoration: underline;
+  color: #0056b3;
+}

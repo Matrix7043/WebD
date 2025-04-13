@@ -1,0 +1,12 @@
+div{
+    padding: 20px;
+    color: #FFFFFF;
+    background-color: #0000ff;
+    border: 6px solid green;
+    outline: 20px solid rgb(255, 255, 0);
+    margin: 25px;
+}
+p{
+    height: 400;
+    width: 100;
+}

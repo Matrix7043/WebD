@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>23BCE1351</title>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <style>
+    .chart-container {
+      width: 45%;
+      display: inline-block;
+      margin: 20px;
+    }
+  </style>
+</head>
+<body>
+
+
+<div class="chart-container">
+  <div id="barChart"></div>
+</div>
+<div class="chart-container">
+  <div id="lineChart"></div>
+</div>
+<div class="chart-container">
+  <div id="pieChart"></div>
+</div>
+<div class="chart-container">
+  <div id="donutChart"></div>
+</div>
+
+<script>
+  const xArray = ["USA", "China", "India", "Germany", "UK"];
+  const yArray = [50, 70, 40, 60, 55];
+
+  Plotly.newPlot("barChart", [{
+    x: xArray,
+    y: yArray,
+    type: "bar",
+    marker: { color: ['blue', 'red', 'green', 'orange', 'purple'] }
+  }], {
+    title: "Bar Chart: Population Growth",
+    xaxis: { title: "Country" },
+    yaxis: { title: "Population (millions)" }
+  });
+
+  Plotly.newPlot("lineChart", [{
+    x: xArray,
+    y: yArray,
+    type: "scatter",
+    mode: "lines+markers",
+    marker: { color: "red", size: 8 },
+    line: { color: "blue", width: 2 }
+  }], {
+    title: "Line Chart: GDP Growth",
+    xaxis: { title: "Country" },
+    yaxis: { title: "GDP (%)" }
+  });
+
+  Plotly.newPlot("pieChart", [{
+    labels: xArray,
+    values: yArray,
+    type: "pie",
+    marker: { colors: ['#ff5733', '#33ff57', '#3357ff', '#ff33a8', '#ffa533'] }
+  }], {
+    title: "Pie Chart: Market Share",
+  });
+
+  // Donut Chart
+  Plotly.newPlot("donutChart", [{
+    labels: xArray,
+    values: yArray,
+    type: "pie",
+    hole: 0.4,
+    marker: { colors: ['#ff5733', '#33ff57', '#3357ff', '#ff33a8', '#ffa533'] }
+  }], {
+    title: "Donut Chart: Revenue Distribution",
+  });
+</script>
+<a href="Q5.html" target="_blank">Question 5</a><br>
+</body>
+</html>

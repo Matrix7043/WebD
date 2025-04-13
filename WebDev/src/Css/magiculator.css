@@ -1,0 +1,64 @@
+table{
+    background-color: rgb(127, 176, 219);
+    border: 5px solid rgb(127, 176, 219);
+}
+td{
+    padding: 1px;
+}
+button{
+    color: rgb(117, 115, 112);
+    width: 30px;
+    height: 20px;
+    font-size: 10px;
+    box-shadow: 0px 2px 0px 0px rgb(79, 130, 175);
+}
+input{
+    width: 90px;
+    height: 16px;
+    background-color: rgb(108, 147, 181);
+    border-radius: 2px;
+    border: 1px solid rgb(79, 130, 175);
+    box-shadow: 0px 2px 0px 0px inset rgb(79, 130, 175);
+}
+#clear{
+    color: rgb(117, 115, 112);
+    background-color: #e198da;
+    border: 1px;
+    border-radius: 2px;
+    width: 30px;
+    height: 20px;
+    font-size: 10px;
+    box-shadow: 0px 2px 0px 0px rgb(167, 79, 175);
+}
+#equal{
+    color: rgb(117, 115, 112);
+    background-color: #f3e957;
+    border: 1px;
+    border-radius: 2px;
+    width: 30px;
+    height: 20px;
+    font-size: 10px;
+    box-shadow: 0px 2px 0px 0px rgb(175, 164, 79);
+}
+
+button:active,#equal:active,#clear:active{
+    color: rgb(241, 239, 237);
+    background-color: #9357f3;
+    border: 1px;
+    border-radius: 2px;
+    width: 30px;
+    height: 20px;
+    font-size: 8px;
+    box-shadow: 0px 2px 0px 0px rgb(141, 79, 175) inset;
+}
+
+.op{
+    color: rgb(117, 115, 112);
+    background-color: #f8e5fb;
+    border: 1px;
+    border-radius: 2px;
+    width: 30px;
+    height: 20px;
+    font-size: 10px;
+    box-shadow: 0px 2px 0px 0px rgb(79, 130, 175);
+}

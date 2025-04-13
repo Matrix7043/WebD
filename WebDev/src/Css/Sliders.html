@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>23BCE1351</title>
+</head>
+<body>
+
+<div id="slider">
+
+    <form oninput="x.value=(parseInt(myRange.value)+parseInt(myRange2.value)+parseInt(myRange3.value))">
+
+        <label for="myRange"> Product 1 </label>
+        <input type="range" min="0" max="100" step="1" value="0" id="myRange" required><br>
+        <label for="myRange2"> Product 2 </label>
+        <input type="range" min="0" max="100" step="1" value="0" id="myRange2"><br>
+        <label for="myRange3"> Product 3 </label>
+        <input type="range" min="0" max="100" step="1" value="0" id="myRange3"><br>
+        Total Rating of 3 Products = <output id="x"></output>
+    </form>
+
+</div>
+
+</body>
+</html>
