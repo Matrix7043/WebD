@@ -3,7 +3,7 @@ import './Javascript.css'; // Import custom CSS for this component
 
 function Javascript() {
   const exercises = [
-    { id: 8, name: "Question 1", path: "/src/javascript/Ex8/cal.html" },
+    { id: 8, name: "Question 1", path: "WebD/WebDev/src/javascript/Ex8/cal.html" },
     { id: 9, name: "Question 1", path: "/src/javascript/Ex9/Q1.html" },
     { id: 10, name: "Question 1", path: "/src/javascript/Ex10/Q1.html" },
     { id: 11, name: "Question 1", path: "/src/javascript/Ex11/Q1.html" },
