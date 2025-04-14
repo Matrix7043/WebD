@@ -1,7 +1,7 @@
 // App.js
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import Exercise13 from './Components/Exercise13';
+import Exercise13 from './components/Exercise13';
 import Exercise14 from './components/Exercise14';
 import Exercise15 from './components/Exercise15';
 import Javascript from './components/Javascript';

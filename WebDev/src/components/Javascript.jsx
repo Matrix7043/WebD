@@ -3,11 +3,11 @@ import './Javascript.css'; // Import custom CSS for this component
 
 function Javascript() {
   const exercises = [
-    { id: 8, name: "Question 1", path: "WebD/WebDev/src/javascript/Ex8/cal.html" },
-    { id: 9, name: "Question 1", path: "/src/javascript/Ex9/Q1.html" },
-    { id: 10, name: "Question 1", path: "/src/javascript/Ex10/Q1.html" },
-    { id: 11, name: "Question 1", path: "/src/javascript/Ex11/Q1.html" },
-    { id: 12, name: "Question 1", path: "/src/javascript/Ex12/Q1.html" }
+    { id: 8, name: "Question 1", path: "/javascript/MainPage.html" },
+    { id: 9, name: "Question 1", path: "/javascript/Ex9/Q1.html" },
+    { id: 10, name: "Question 1", path: "/javascript/Ex10/Q1.html" },
+    { id: 11, name: "Question 1", path: "/javascript/Ex11/Q1.html" },
+    { id: 12, name: "Question 1", path: "/javascript/Ex12/Q1.html" }
   ];
 
   return (
@@ -25,7 +25,7 @@ function Javascript() {
             <a 
               href={exercise.path} 
               target="_blank" 
-              rel="noopener noreferrer" 
+              rel="noopener noreferrer"
               className="exercise-link"
             >
               Open Exercise
@@ -33,6 +33,7 @@ function Javascript() {
           </div>
         ))}
       </div>
+        <a href={"../src/javascript/Exercise9/Q1.html"} target={"_blank"}>Link</a>
     </div>
   );
 }

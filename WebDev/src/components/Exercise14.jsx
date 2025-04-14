@@ -1,7 +1,7 @@
 // Exercise14.jsx
 import React from 'react';
-import reactLogo from '../Css/Photo.jpeg';
-import viteLogo from '../Css/Kendrick.jpg';
+import reactLogo from '../assets/Kendrick.jpg';
+import viteLogo from '../assets/photo.jpeg';
 
 const Q1 = () => {
   return (
