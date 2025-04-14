@@ -3,8 +3,8 @@ import './Css.css'; // Import custom CSS for this component
 
 function Css() {
     const exercises = [
-        { id: 6, name: "", path: "/src/Css/CoolBox.html" },
-        { id: 7, name: "", path: "/src/Css/Formatting.html" }
+        { id: 6, name: "", path: "https://introduction-blush.vercel.app/Css/CoolBox.html" },
+        { id: 7, name: "", path: "https://introduction-blush.vercel.app/Css/Formatting.html" }
     ];
 
     return (
